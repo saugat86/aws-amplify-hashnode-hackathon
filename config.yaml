@@ -1,0 +1,101 @@
+baseURL: "https://saugaattiwari.com.np"
+languageCode: en-us
+title: Saugat Tiwari
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blogs
+      url: /blog
+      weight: 20
+    - identifier: notes
+      name: Notes
+      url: /notes
+      weight: 30
+    # - identifier: experience
+    #   name: Experience
+    #   url: /experience
+    #   weight: 40
+    # - identifier: search
+    #   name: Search
+    #   url: /search
+    #   weight: 50
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: 
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Saugat Tiwari"
+    subtitle: "I hold a BSc. in Computer Science and Information Technology, which has provided me with a strong foundation in computer science principles and software development. Currently, I am working as a DevOps Engineer at Adex International, where I am responsible for implementing and maintaining the organization's cloud infrastructure. As a DevOps Engineer, I bring in-depth knowledge and expertise in cloud computing technologies to help the organization achieve its goals. I am passionate about technology and enjoy exploring new ideas to improve efficiency and effectiveness in the workplace."
+    imageUrl: "home/saugat.jpg"
+    imageWidth: 220
+    imageHeight: 220
+    buttons:
+      - name: Resume
+        url: "#"
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:saugattripathi07@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/saugattiwari/"
+    - name: "github"
+      url: "https://github.com/saugat86"
+    - name: "medium"
+      url: "https://medium.com/@saugattripathi86"
+    - name: "cv"
+      url: "#"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
